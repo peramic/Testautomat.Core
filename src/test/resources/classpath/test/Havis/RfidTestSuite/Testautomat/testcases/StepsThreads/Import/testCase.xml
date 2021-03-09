@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s0">
+      <comment>Start thread groups</comment>
+      <threads>
+        <threadGroup count="0">
+          <steps>
+            <step name="s0.0">
+              <comment>This step is never executed</comment>
+              <module>
+                <object objectId="o1" />
+              </module>
+            </step>
+          </steps>
+        </threadGroup>
+        <threadGroup>
+          <steps>
+            <step name="s0.1">
+              <comment>This step is executed once</comment>
+              <module>
+                <object objectId="o1" />
+              </module>
+            </step>
+          </steps>
+        </threadGroup>
+        <threadGroup count="2">
+          <steps>
+            <step name="s0.2">
+              <comment>This step is executed twice</comment>
+              <module>
+                <object objectId="common.sleep">
+                  <properties>
+                    <property name="duration" value="100" />
+                  </properties>
+                </object>
+              </module>
+            </step>
+            <step name="s0.3">
+              <comment>This step contains a nested thread group which is executed twice</comment>
+              <threads>
+                <threadGroup count="3" rampUpPeriod="1000">
+                  <steps>
+                    <step name="s0.3.1">
+                      <comment>This step is executed 2 * 3 times</comment>
+                      <module>
+                        <object objectId="common.sleep">
+                          <properties>
+                            <property name="duration" value="800" />
+                          </properties>
+                        </object>
+                      </module>
+                    </step>
+                  </steps>
+                </threadGroup>
+              </threads>
+            </step>
+          </steps>
+        </threadGroup>
+      </threads>
+    </step>
+  </steps>
+</testCase>

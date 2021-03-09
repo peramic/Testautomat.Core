@@ -1,0 +1,7 @@
+Bundle-Name: Ha-VIS Test Suite Core
+Bundle-SymbolicName: havis.test.suite.core
+Bundle-Version: 2.7.0
+Implementation-Version: 2.7
+Bundle-ManifestVersion: 2
+Bundle-Vendor: HARTING IT_SD
+Export-Package: havis.test.suite.core

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/test/suite" module="core" default="true" />
+
+	<configurations>
+		<conf name="default" visibility="public" />
+	</configurations>
+
+	<publications>
+		<artifact name="havis.test.suite.core" type="jar" ext="jar" conf="default" />
+	</publications>
+
+	<dependencies>
+		<dependency org="commons-cli" name="commons-cli" rev="latest.integration" conf="default" />
+		<dependency org="havis/test/suite" name="api" rev="latest.integration" conf="default" />
+		<dependency org="havis/test/suite" name="common" rev="latest.integration" conf="default" />
+		<dependency org="org/slf4j" name="slf4j-api" rev="latest.integration" conf="default" />
+		<dependency org="org/springframework" name="spring-beans" rev="latest.integration" conf="default" />
+		<dependency org="org/springframework" name="spring-context" rev="latest.integration" conf="default" />
+	</dependencies>
+	
+</ivy-module>

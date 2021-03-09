@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="havis/test/suite" module="core" default="true" />
+
+	<configurations>
+		<conf name="default" />
+	</configurations>
+
+	<dependencies>
+		<dependency org="havis/test/suite" name="api" rev="${havis.version}" conf="default" />
+		<dependency org="havis/test/suite" name="common" rev="${havis.version}" conf="default" />
+	
+		<dependency org="org/jmockit" name="jmockit" rev="${jmockit.version}" conf="default" />
+		<dependency org="org/jmockit" name="jmockit-coverage" rev="${jmockit-coverage.version}" conf="default" />
+		<dependency org="commons-cli" name="commons-cli" rev="${commons-cli.version}" conf="default" />
+		<dependency org="org/testng" name="testng" rev="${testng.version}" conf="default" />
+		<dependency org="org/springframework" name="spring-context" rev="${spring-context.version}" conf="default" />
+		<dependency org="org/springframework" name="spring-beans" rev="${spring-beans.version}" conf="default" />
+	    <dependency org="org/jibx" name="jibx-run" rev="${jibx-run.version}" conf="default" />
+		<dependency org="net/sf/saxon" name="Saxon-HE" rev="${Saxon-HE.version}" conf="default" />
+		<dependency org="org/antlr" name="ST4" rev="${ST4.version}" conf="default" />
+		<dependency org="org/slf4j" name="slf4j-api" rev="${slf4j-api.version}" conf="default" />
+	</dependencies>
+
+</ivy-module>

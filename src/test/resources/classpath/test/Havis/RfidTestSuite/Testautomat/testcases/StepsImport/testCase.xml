@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+    <step name="s2">
+      <comment>import a test case that throws a verification error</comment>
+      <import>
+        <testCaseURI>Import1</testCaseURI>
+      </import>
+    </step>
+    <step name="s3">
+      <comment>
+import a test case that throws an exception using the full path to the imported test case
+      </comment>
+      <import>
+        <testCaseURI>StepsImport/Import2</testCaseURI>
+      </import>
+    </step>
+    <step name="s4">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+  </steps>
+</testCase>

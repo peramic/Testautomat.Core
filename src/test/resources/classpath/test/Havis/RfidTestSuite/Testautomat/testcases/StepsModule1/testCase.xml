@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+  </steps>
+</testCase>

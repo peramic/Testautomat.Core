@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <module>
+        <object objectId="o1">
+          <properties>
+            <property name="testCaseId" value="$testCaseId$" />
+            <property name="propValue" value="$prop.value$" />
+            <property name="a" value="$a$" />
+            <property name="b" value="$b$" />
+          </properties>
+        </object>        
+      </module>
+    </step>
+    <step name="s2">
+      <module>
+        <object objectId="oh" />
+      </module>
+    </step>
+  </steps>
+</testCase>

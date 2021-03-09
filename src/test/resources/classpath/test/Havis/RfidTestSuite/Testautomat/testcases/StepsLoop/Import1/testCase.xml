@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>    
+    <step name="s0">
+      <comment>Start a simple loop</comment>
+      <loop count="3">
+        <steps>
+          <step name="s0.0">
+            <comment>valid</comment>
+            <module>
+              <object objectId="o1" />
+            </module>
+          </step>
+        </steps>
+      </loop>
+    </step>
+    <step name="s1">
+      <comment>Use a simple module</comment>
+      <module>
+        <object objectId="o2" />
+      </module>
+    </step>
+    <step name="s2">
+      <comment>Declare a loop with content which will never be executed</comment>
+      <loop count="0">
+        <steps>
+          <step name="s2.0">
+            <comment>valid</comment>
+            <module>
+              <object objectId="o1" />
+            </module>
+          </step>
+        </steps>
+      </loop>
+    </step>
+    <step name="s3">
+      <comment>Import another test case more than one time</comment>
+      <loop count="2">
+        <steps>
+          <step name="s3.0">
+            <comment>Import another test case in the loop</comment>
+            <import>
+              <testCaseURI>Import2</testCaseURI>
+            </import>
+          </step>
+        </steps>
+      </loop>
+    </step>
+  </steps>
+</testCase>

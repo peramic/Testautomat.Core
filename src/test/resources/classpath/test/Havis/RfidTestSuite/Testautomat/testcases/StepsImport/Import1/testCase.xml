@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o2" />
+      </module>
+    </step>
+    <step name="s2" throwVerificationErrors="true">
+      <comment>verification error</comment>
+      <module>
+        <object objectId="o2" />
+        <verifications>
+          <verification name="ver2">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s3">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o2" />
+      </module>
+    </step>
+  </steps>
+</testCase>

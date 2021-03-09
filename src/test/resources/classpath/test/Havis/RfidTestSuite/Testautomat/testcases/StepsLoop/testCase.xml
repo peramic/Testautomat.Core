@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s0">
+      <comment>
+Import another test case in a needless loop to get its final report.
+The imported test case contains more tests.
+      </comment>
+      <loop count="1">
+        <steps>
+          <step name="s0.0">
+            <comment>Import another test case</comment>
+            <import>
+              <testCaseURI>Import1</testCaseURI>
+            </import>
+          </step>          
+        </steps>
+      </loop>
+    </step>
+  </steps>
+</testCase>

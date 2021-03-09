@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<q1:LRSpec xmlns:q1="urn:epcglobal:ale:xsd:1"
+           schemaVersion="1.0" creationDate="2001-10-26T19:32:52Z">
+  <properties>
+    <property>
+      <name>ReaderType</name>
+      <value>LLRP</value>
+    </property>
+    <property>
+      <name>Connector.ConnectionType</name>
+      <value>TCP</value>
+    </property>
+    <property>
+      <name>Connector.IP</name>
+      <value>localhost</value>
+    </property>
+    <property>
+      <name>Connector.Port</name>
+      <value>5084</value>
+    </property>
+    <property>
+      <name>Connector.Timeout</name>
+      <value>3000</value>
+    </property>
+  </properties>
+</q1:LRSpec>

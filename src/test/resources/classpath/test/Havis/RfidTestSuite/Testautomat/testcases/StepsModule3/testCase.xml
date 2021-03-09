@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+    <step name="s2" throwExceptions="true">
+      <comment>exception while loading the object due to invalid objectId</comment>
+      <module>
+        <object objectId="oh" />
+      </module>
+    </step>
+    <step name="s3">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+  </steps>
+</testCase>

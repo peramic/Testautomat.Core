@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s0">
+      <comment>Import another test case to get its final report</comment>
+      <import>
+        <testCaseURI>Import</testCaseURI>
+      </import>
+    </step>
+  </steps>
+</testCase>

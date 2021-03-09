@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+    <step name="s2">
+      <comment>verification error</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications>
+          <verification name="ver2">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s3">
+      <comment>exception while loading the object due to an invalid objectId</comment>
+      <module>
+        <object objectId="oh" />
+      </module>
+    </step>
+    <step name="s4" throwVerificationErrors="true">
+      <comment>verification error</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications>
+          <verification name="ver2">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s5">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+  </steps>
+</testCase>

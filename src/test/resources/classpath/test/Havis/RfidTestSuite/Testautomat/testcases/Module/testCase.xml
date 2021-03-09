@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<testCase xmlns="http://www.HARTING.com/RFID/TestAutomat">
+  <steps>
+    <step name="s1">
+      <comment>valid</comment>
+      <module>
+        <object objectId="o1" />
+      </module>
+    </step>
+    <step name="s2">
+      <comment>valid incl. properties and verification</comment>
+      <module>
+        <object objectId="o1">
+          <properties>
+            <property name="p1" value="v1" />
+            <property name="p2" value="/x" globalContextCommunity="ccc" />
+          </properties>
+        </object>
+        <verifications>
+          <verification name="ver2">
+            <comment />
+            <expected>
+              <result><![CDATA[ <anyResult /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s3">
+      <comment>verification error</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications>
+          <verification name="ver3">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s4">
+      <comment>exception while loading the object due to an invalid objectId</comment>
+      <module>
+        <object objectId="oh" />
+        <verifications>
+          <verification name="ver4">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s5">
+      <comment>exception while execution</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications>
+          <verification name="ver5">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s6">
+      <comment>exception while execution (verification for exception is enabled)</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications verifyException="true">
+          <verification name="ver6">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s7">
+      <comment>exception while "finish" call after verification error</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications>
+          <verification name="ver7">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+    <step name="s8">
+      <comment>exception while execution AND "finish" call</comment>
+      <module>
+        <object objectId="o1" />
+        <verifications>
+          <verification name="ver8">
+            <comment />
+            <expected>
+              <result><![CDATA[ <oh /> ]]></result>
+            </expected>
+          </verification>
+        </verifications>
+      </module>
+    </step>
+  </steps>
+</testCase>
